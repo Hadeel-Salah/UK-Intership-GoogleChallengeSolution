@@ -15,18 +15,18 @@ import java.util.Scanner;
 import java.util.Set;
 
 /** A class used to represent a Video Library. */
-class VideoLibrary {
+public class VideoLibrary {
 
   private final HashMap<String, Video> videos;
   private final HashMap<String, List<Video>> searchIndex;
   private final HashMap<String, List<Video>> tagIndex;
 
-  VideoLibrary() {
+  public VideoLibrary() {
     this.videos = new HashMap<>();
     searchIndex = new HashMap<>();
     tagIndex = new HashMap<>();
     try {
-      File file = new File(this.getClass().getResource("/resources/videos.txt").getFile());
+      File file = new File(this.getClass().getResource("/main/resources/videos.txt").getFile());
 
       Scanner scanner = new Scanner(file);
       while (scanner.hasNextLine()) {
@@ -55,12 +55,12 @@ class VideoLibrary {
     }
   }
 
-  List<Video> getVideos() {
+  public List<Video> getVideos() {
     return new ArrayList<>(this.videos.values());
   }
 
   /** Get a video by id. Returns null if the video is not found. */
-  Video getVideo(String videoId) {
+  public Video getVideo(String videoId) {
     return this.videos.get(videoId);
   }
 

@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /** A class used to represent a video. */
-class Video {
+public class Video {
 
   private final String title;
   private final String videoId;
@@ -19,17 +19,17 @@ class Video {
   }
 
   /** Returns the title of the video. */
-  String getTitle() {
+  public String getTitle() {
     return title;
   }
 
   /** Returns the video id of the video. */
-  String getVideoId() {
+  public String getVideoId() {
     return videoId;
   }
 
-  /** Returns a readonly collection of the tags of the video. */
-  List<String> getTags() {
+  /** Returns a read only collection of the tags of the video. */
+  public List<String> getTags() {
     return tags;
   }
 
